@@ -4,12 +4,12 @@ const standards = [
     short: "ISO 27001",
     name: "Information Security Management System",
     org: "ISO/IEC",
-    region: "🌍 Global",
+    region: " Global",
     type: "Certifiable",
     mandatory: "Voluntary",
     focus: "ISMS",
     color: "#3b82f6",
-    icon: "🏆",
+    
     category: "iso",
     overview: "ISO/IEC 27001 is the international standard for establishing, implementing, maintaining, and continually improving an Information Security Management System (ISMS). It provides a risk-based approach to managing sensitive company information.",
     clauses: [
@@ -24,90 +24,95 @@ const standards = [
     controls: "93 Annex A controls (2022 version) grouped into: Organizational, People, Physical, Technological",
     usecases: ["Enterprise compliance certification", "VAPT & audit alignment", "Startup security baseline", "Vendor due diligence"],
     related: ["iso27002", "iso27017", "iso27701"],
+    reference: "https://www.iso.org/isoiec-27001-information-security.html",
   },
   {
     id: "iso27002",
     short: "ISO 27002",
     name: "Security Controls Guidelines",
     org: "ISO/IEC",
-    region: "🌍 Global",
+    region: " Global",
     type: "Guideline",
     mandatory: "Voluntary",
     focus: "Control implementation",
     color: "#60a5fa",
-    icon: "📘",
+    
     category: "iso",
     overview: "ISO/IEC 27002 provides guidance for implementing the information security controls listed in ISO/IEC 27001 Annex A. It is the companion standard that explains how to apply each of the 93 controls.",
     clauses: [],
     controls: "Detailed implementation guidance for all 93 ISO 27001 controls with attributes, purpose, and implementation notes",
     usecases: ["Controls implementation reference", "Policy writing guide", "Audit preparation", "Security architecture design"],
     related: ["iso27001"],
+    reference: "https://www.iso.org/home.html",
   },
   {
     id: "iso27017",
     short: "ISO 27017",
     name: "Cloud Security Controls",
     org: "ISO/IEC",
-    region: "🌍 Global",
+    region: " Global",
     type: "Guideline",
     mandatory: "Voluntary",
     focus: "Cloud security",
     color: "#93c5fd",
-    icon: "☁️",
+    
     category: "iso",
     overview: "ISO/IEC 27017 provides cloud-specific security controls extending ISO 27001/27002. It defines responsibilities for both cloud service providers (CSPs) and cloud service customers (CSCs).",
     clauses: [],
     controls: "7 additional cloud-specific controls beyond ISO 27002 covering virtual machine hardening, cloud admin operations, monitoring, and shared responsibilities",
     usecases: ["AWS/Azure/GCP security baseline", "Cloud vendor assessment", "Multi-cloud governance", "SaaS security"],
     related: ["iso27001", "iso27018"],
+    reference: "https://www.iso.org/home.html",
   },
   {
     id: "iso27018",
     short: "ISO 27018",
     name: "PII Protection in Cloud",
     org: "ISO/IEC",
-    region: "🌍 Global",
+    region: " Global",
     type: "Guideline",
     mandatory: "Voluntary",
     focus: "Privacy in cloud",
     color: "#bfdbfe",
-    icon: "🔏",
+    
     category: "iso",
     overview: "ISO/IEC 27018 establishes controls for protection of Personally Identifiable Information (PII) in public cloud computing environments, acting as a bridge between cloud security and privacy compliance.",
     clauses: [],
     controls: "Controls addressing: consent, data minimization, transparency, accountability, and PII breach notification in cloud services",
     usecases: ["GDPR cloud compliance", "Healthcare cloud data", "PII data processor obligations", "Cloud privacy audits"],
     related: ["iso27001", "iso27701"],
+    reference: "https://www.iso.org/home.html",
   },
   {
     id: "iso27701",
     short: "ISO 27701",
     name: "Privacy Information Management",
     org: "ISO/IEC",
-    region: "🌍 Global",
+    region: " Global",
     type: "Certifiable Extension",
     mandatory: "Voluntary",
     focus: "Privacy ISMS",
     color: "#dbeafe",
-    icon: "🔒",
+    
     category: "iso",
     overview: "ISO/IEC 27701 extends ISO 27001 to include privacy controls, creating a Privacy Information Management System (PIMS). It maps to GDPR and other privacy regulations, making it a key tool for demonstrating privacy compliance.",
     clauses: [],
     controls: "Privacy-specific controls for both PII controllers and processors. Maps directly to GDPR obligations including Articles 5, 6, 9, 17, 20, 25, 28, 32, 33, and 35.",
     usecases: ["GDPR accountability demonstration", "Privacy compliance certification", "Data processor contracts", "Privacy by design implementation"],
     related: ["iso27001", "gdpr"],
+    reference: "https://www.iso.org/standard/71670.html",
   },
   {
     id: "owasp-top10",
     short: "OWASP Top 10",
     name: "Web Application Security Risks",
     org: "OWASP",
-    region: "🌍 Global",
+    region: " Global",
     type: "Best Practice",
     mandatory: "No",
     focus: "Web app security",
     color: "#f97316",
-    icon: "🔥",
+    
     category: "owasp",
     overview: "The OWASP Top 10 is the most recognized list of critical web application security risks. Updated periodically based on real-world data from vulnerability assessments, penetration tests, and bug bounty programs worldwide.",
     clauses: [
@@ -125,18 +130,19 @@ const standards = [
     controls: "Each risk includes: description, example attack scenarios, prevention techniques, and references",
     usecases: ["VAPT report baseline", "Developer security training", "Code review checklist", "Bug bounty scope definition"],
     related: ["owasp-asvs", "owasp-mobile"],
+    reference: "https://www.iso.org/home.html",
   },
   {
     id: "owasp-asvs",
     short: "OWASP ASVS",
     name: "Application Security Verification Standard",
     org: "OWASP",
-    region: "🌍 Global",
+    region: " Global",
     type: "Best Practice",
     mandatory: "No",
     focus: "Secure SDLC verification",
     color: "#fb923c",
-    icon: "🔍",
+    
     category: "owasp",
     overview: "ASVS provides a framework of security requirements and controls that developers and security testers can use to define, build, and test secure web applications. It defines three security verification levels.",
     clauses: [
@@ -147,18 +153,19 @@ const standards = [
     controls: "14 categories including: Architecture, Authentication, Session Management, Access Control, Validation, Cryptography, Error Handling, Data Protection, API Security, Config, IAM",
     usecases: ["Secure SDLC requirements", "Security acceptance criteria", "Penetration test scope definition", "Third-party app assessment"],
     related: ["owasp-top10"],
+    reference: "https://www.iso.org/home.html",
   },
   {
     id: "owasp-mobile",
     short: "OWASP Mobile Top 10",
     name: "Mobile Application Security Risks",
     org: "OWASP",
-    region: "🌍 Global",
+    region: " Global",
     type: "Best Practice",
     mandatory: "No",
     focus: "Mobile app security",
     color: "#fdba74",
-    icon: "📱",
+    
     category: "owasp",
     overview: "The OWASP Mobile Top 10 lists the most critical security risks for mobile applications (iOS and Android). The 2024 version reflects the current mobile threat landscape including privacy concerns and supply chain issues.",
     clauses: [
@@ -176,18 +183,19 @@ const standards = [
     controls: "Prevention techniques specific to both Android and iOS platforms for each risk",
     usecases: ["Android/iOS VAPT baseline", "Mobile SDLC security", "App store compliance prep", "Mobile bug bounty"],
     related: ["owasp-top10", "owasp-asvs"],
+    reference: "https://www.iso.org/home.html",
   },
   {
     id: "nist-csf",
     short: "NIST CSF",
     name: "Cybersecurity Framework",
     org: "NIST",
-    region: "🇺🇸 US (Global Adoption)",
+    region: " US (Global Adoption)",
     type: "Framework",
     mandatory: "Voluntary",
     focus: "Risk management",
     color: "#22c55e",
-    icon: "🏛",
+    
     category: "nist",
     overview: "The NIST Cybersecurity Framework (CSF) 2.0 provides a flexible, risk-based approach to managing cybersecurity risk. Originally for US critical infrastructure, it is now widely adopted globally across industries and company sizes.",
     clauses: [
@@ -201,18 +209,19 @@ const standards = [
     controls: "Framework Core with Functions, Categories, and Subcategories. Maps to ISO 27001, NIST 800-53, CIS Controls, COBIT and other frameworks",
     usecases: ["Executive risk communication", "Security program assessment", "Vendor risk management", "Board-level reporting"],
     related: ["nist-800-53", "nist-800-61", "cis"],
+    reference: "https://www.iso.org/home.html",
   },
   {
     id: "nist-800-53",
     short: "NIST SP 800-53",
     name: "Security & Privacy Controls",
     org: "NIST",
-    region: "🇺🇸 US Federal",
+    region: " US Federal",
     type: "Control Catalog",
     mandatory: "Mandatory (Federal)",
     focus: "Federal system controls",
     color: "#4ade80",
-    icon: "📘",
+    
     category: "nist",
     overview: "NIST SP 800-53 Rev 5 provides the most comprehensive catalog of security and privacy controls for federal information systems and organizations. It is the foundational control standard for US government agencies and their contractors.",
     clauses: [
@@ -227,18 +236,19 @@ const standards = [
     controls: "20 control families, 1000+ individual controls across low/moderate/high baselines. Rev 5 integrates privacy controls directly",
     usecases: ["FedRAMP authorization", "US federal agency compliance", "Defense contractor requirements (CMMC)", "FISMA compliance"],
     related: ["nist-csf", "nist-800-61"],
+    reference: "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final",
   },
   {
     id: "nist-800-61",
     short: "NIST SP 800-61",
     name: "Incident Response Guide",
     org: "NIST",
-    region: "🇺🇸 US (Global Reference)",
+    region: " US (Global Reference)",
     type: "Guideline",
     mandatory: "Voluntary",
     focus: "Incident response",
     color: "#86efac",
-    icon: "📗",
+    
     category: "nist",
     overview: "NIST SP 800-61 Rev 2 is the definitive guide for establishing an incident response program. It covers the entire incident lifecycle and is widely used as the industry reference for IR planning and execution.",
     clauses: [
@@ -250,18 +260,19 @@ const standards = [
     controls: "Incident categories, severity classifications, escalation procedures, evidence handling guidelines, and coordination with external parties",
     usecases: ["IR plan development", "SOC playbook creation", "Tabletop exercise design", "Post-breach analysis"],
     related: ["nist-csf", "nist-800-53"],
+    reference: "https://www.iso.org/home.html",
   },
   {
     id: "pci-dss",
     short: "PCI-DSS v4.0",
     name: "Payment Card Industry Data Security Standard",
     org: "PCI SSC",
-    region: "🌍 Global",
+    region: " Global",
     type: "Compliance Standard",
     mandatory: "Yes (card processing)",
     focus: "Cardholder data protection",
     color: "#eab308",
-    icon: "🏦",
+    
     category: "compliance",
     overview: "PCI-DSS v4.0 (released 2022, effective March 2024) is the mandatory standard for any organization that stores, processes, or transmits payment card data. Non-compliance results in fines, increased transaction fees, and loss of card processing privileges.",
     clauses: [
@@ -281,18 +292,19 @@ const standards = [
     controls: "12 requirements with 300+ sub-requirements. v4.0 adds 13 new requirements including multi-factor authentication expansion",
     usecases: ["Payment gateway compliance", "E-commerce security", "FinTech audits", "Card brand mandates"],
     related: ["iso27001", "nist-csf"],
+    reference: "https://www.pcisecuritystandards.org/document_library",
   },
   {
     id: "gdpr",
     short: "GDPR",
     name: "General Data Protection Regulation",
     org: "European Union",
-    region: "🇪🇺 EU (Extraterritorial)",
+    region: " EU (Extraterritorial)",
     type: "Regulation",
     mandatory: "Yes (EU data subjects)",
     focus: "Personal data protection",
     color: "#6366f1",
-    icon: "🇪🇺",
+    
     category: "compliance",
     overview: "GDPR is the EU's comprehensive data protection law that applies to any organization processing EU residents' personal data, regardless of where the organization is located. Penalties reach €20M or 4% of global annual turnover.",
     clauses: [
@@ -308,18 +320,19 @@ const standards = [
     controls: "Data subject rights (access, rectification, erasure, portability, objection), Data Protection Officer (DPO) appointment, Privacy by Design, Standard Contractual Clauses for transfers",
     usecases: ["EU market access", "Data breach response", "Privacy policy compliance", "Vendor DPA agreements"],
     related: ["iso27701", "iso27001"],
+    reference: "https://gdpr.eu/",
   },
   {
     id: "cert-in",
     short: "CERT-In",
     name: "Indian Computer Emergency Response Team",
     org: "Ministry of Electronics & IT",
-    region: "🇮🇳 India",
+    region: " India",
     type: "Regulation",
     mandatory: "Yes (in India)",
     focus: "Incident reporting",
     color: "#f43f5e",
-    icon: "🇮🇳",
+    
     category: "india",
     overview: "CERT-In (Indian CERT) under MeitY mandates cybersecurity incident reporting for organizations operating in India. The 2022 directions significantly tightened requirements with a 6-hour reporting window and 5-year log retention.",
     clauses: [
@@ -332,18 +345,19 @@ const standards = [
     controls: "24 incident types that must be reported including data breaches, ransomware, unauthorized access, critical infrastructure attacks",
     usecases: ["India operations compliance", "SOC reporting procedures", "Cloud provider compliance in India", "BFSI regulatory compliance"],
     related: ["rbi", "iso27001"],
+    reference: "https://www.iso.org/home.html",
   },
   {
     id: "rbi",
     short: "RBI Cybersecurity Framework",
     name: "Reserve Bank of India Cybersecurity",
     org: "Reserve Bank of India",
-    region: "🇮🇳 India (BFSI)",
+    region: " India (BFSI)",
     type: "Regulation",
     mandatory: "Yes (Banks/NBFCs)",
     focus: "Banking cybersecurity",
     color: "#fb7185",
-    icon: "🏛",
+    
     category: "india",
     overview: "The RBI Cybersecurity Framework mandates banks, NBFCs, and payment system operators to implement robust cybersecurity controls, report incidents, conduct audits, and maintain cyber resilience. Non-compliance risks regulatory action.",
     clauses: [
@@ -358,18 +372,19 @@ const standards = [
     controls: "Covers: SOC requirements, SWIFT customer security controls, payment system security, internet banking security, ATM/PoS security",
     usecases: ["Bank IT audits", "NBFC compliance", "Payment gateway approvals", "RBI audit preparation"],
     related: ["cert-in", "pci-dss", "iso27001"],
+    reference: "https://www.iso.org/home.html",
   },
   {
     id: "cis",
     short: "CIS Controls v8",
     name: "Center for Internet Security Controls",
     org: "CIS",
-    region: "🌍 Global",
+    region: " Global",
     type: "Best Practice",
     mandatory: "No",
     focus: "Practical security baseline",
     color: "#14b8a6",
-    icon: "🛠",
+    
     category: "practical",
     overview: "CIS Controls v8 is the most practical, implementation-focused security framework. 18 prioritized controls with Implementation Groups (IG1/IG2/IG3) allow organizations of any size to adopt controls proportional to their risk profile.",
     clauses: [
@@ -395,18 +410,19 @@ const standards = [
     controls: "Implementation Groups: IG1 (basic cyber hygiene), IG2 (adds 74 safeguards), IG3 (all 153 safeguards). Each maps to NIST CSF, ISO 27001, and PCI-DSS",
     usecases: ["SME security baseline", "Security program roadmap", "Audit readiness", "Board risk reporting"],
     related: ["nist-csf", "iso27001"],
+    reference: "https://www.iso.org/home.html",
   },
   {
     id: "soc2",
     short: "SOC 2",
     name: "System and Organization Controls 2",
     org: "AICPA",
-    region: "🇺🇸 US (SaaS Global)",
+    region: " US (SaaS Global)",
     type: "Audit Report",
     mandatory: "Market-driven",
     focus: "SaaS trust & security",
     color: "#8b5cf6",
-    icon: "🔐",
+    
     category: "compliance",
     overview: "SOC 2 is an auditing standard for technology service providers. Type I reports on design of controls at a point in time. Type II reports on operating effectiveness over 6–12 months. Most B2B SaaS companies require SOC 2 Type II for enterprise sales.",
     clauses: [
@@ -419,18 +435,19 @@ const standards = [
     controls: "Trust Services Criteria mapped to COSO framework. Security (CC) criteria is mandatory; Availability, PI, Confidentiality, Privacy are add-ons based on customer commitments",
     usecases: ["Enterprise SaaS sales enablement", "Vendor security questionnaires", "Customer trust building", "US market access"],
     related: ["iso27001", "nist-csf"],
+    reference: "https://www.aicpa-cima.com/resources/download/soc-2-system-and-organization-controls-for-service-organizations",
   },
   {
     id: "cobit",
     short: "COBIT 2019",
     name: "Control Objectives for IT",
     org: "ISACA",
-    region: "🌍 Global",
+    region: " Global",
     type: "IT Governance Framework",
     mandatory: "Voluntary",
     focus: "IT governance & risk",
     color: "#a78bfa",
-    icon: "🔄",
+    
     category: "practical",
     overview: "COBIT 2019 is ISACA's framework for IT governance and management. It bridges the gap between technical security controls and business governance objectives, making it essential for CISOs and IT directors communicating with boards.",
     clauses: [
@@ -443,16 +460,17 @@ const standards = [
     controls: "40 governance and management objectives. Includes Design Factors for tailoring to organizational context. Maps to ISO 27001, NIST, ITIL, and TOGAF",
     usecases: ["Board-level IT governance", "ISACA CISA/CISM exam", "IT audit frameworks", "Enterprise risk management"],
     related: ["nist-csf", "iso27001"],
+    reference: "https://www.isaca.org/resources/cobit",
   },
 ];
 
 const categoryGroups = [
-  { id: "iso", label: "ISO Standards", color: "#3b82f6", icon: "🌍" },
-  { id: "owasp", label: "OWASP", color: "#f97316", icon: "🔥" },
-  { id: "nist", label: "NIST", color: "#22c55e", icon: "🏛" },
-  { id: "compliance", label: "Compliance", color: "#eab308", icon: "⚖️" },
-  { id: "india", label: "India", color: "#f43f5e", icon: "🇮🇳" },
-  { id: "practical", label: "Practical", color: "#14b8a6", icon: "🛠" },
+  { id: "iso", label: "ISO Standards", color: "#3b82f6",  },
+  { id: "owasp", label: "OWASP", color: "#f97316",  },
+  { id: "nist", label: "NIST", color: "#22c55e",  },
+  { id: "compliance", label: "Compliance", color: "#eab308",  },
+  { id: "india", label: "India", color: "#f43f5e",  },
+  { id: "practical", label: "Practical", color: "#14b8a6",  },
 ];
 
 const roadmap = [
@@ -587,7 +605,7 @@ function CybersecStandards() {
                       <td style={{ padding: "10px 14px", color: "#94a3b8" }}>{s.region}</td>
                       <td style={{ padding: "10px 14px" }}>
                         <span style={{ color: s.mandatory.startsWith("Yes") ? "#ef4444" : s.mandatory === "Voluntary" ? "#22c55e" : "#f59e0b", fontSize: 10 }}>
-                          {s.mandatory.startsWith("Yes") ? "⚠ " : s.mandatory === "Voluntary" ? "✓ " : "◎ "}{s.mandatory}
+                          {s.mandatory.startsWith("Yes") ? " " : s.mandatory === "Voluntary" ? " " : "◎ "}{s.mandatory}
                         </span>
                       </td>
                       <td style={{ padding: "10px 14px", color: "#64748b" }}>{s.focus}</td>
@@ -621,7 +639,7 @@ function CybersecStandards() {
                       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                         <span style={{ fontSize: 9, color: "#475569", fontFamily: "monospace" }}>{std.region}</span>
                         <span style={{ fontSize: 9, color: std.mandatory.startsWith("Yes") ? "#ef4444" : "#22c55e", fontFamily: "monospace" }}>
-                          {std.mandatory.startsWith("Yes") ? "⚠ REQUIRED" : "✓ VOLUNTARY"}
+                          {std.mandatory.startsWith("Yes") ? " REQUIRED" : " VOLUNTARY"}
                         </span>
                       </div>
                     </div>
@@ -641,12 +659,12 @@ function CybersecStandards() {
                       <div style={{ fontSize: 18, fontWeight: 700, color: selectedStd.color, fontFamily: "monospace", marginTop: 6 }}>{selectedStd.short}</div>
                       <div style={{ fontSize: 11, color: "#94a3b8", marginBottom: 12, maxWidth: 300, lineHeight: 1.4 }}>{selectedStd.name}</div>
                     </div>
-                    <button onClick={() => setSelected(null)} style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", color: "#64748b", cursor: "pointer", borderRadius: 6, width: 28, height: 28, fontSize: 14, display: "flex", alignItems: "center", justifyContent: "center" }}>✕</button>
+                    <button onClick={() => setSelected(null)} style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", color: "#64748b", cursor: "pointer", borderRadius: 6, width: 28, height: 28, fontSize: 14, display: "flex", alignItems: "center", justifyContent: "center" }}></button>
                   </div>
                   <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
                     <span style={{ fontSize: 9, padding: "3px 8px", borderRadius: 100, background: "rgba(255,255,255,0.07)", color: "#94a3b8", fontFamily: "monospace" }}>{selectedStd.region}</span>
                     <span style={{ fontSize: 9, padding: "3px 8px", borderRadius: 100, background: selectedStd.mandatory.startsWith("Yes") ? "rgba(239,68,68,0.15)" : "rgba(34,197,94,0.15)", color: selectedStd.mandatory.startsWith("Yes") ? "#ef4444" : "#22c55e", fontFamily: "monospace" }}>
-                      {selectedStd.mandatory.startsWith("Yes") ? "⚠ " : "✓ "}{selectedStd.mandatory}
+                      {selectedStd.mandatory.startsWith("Yes") ? " " : " "}{selectedStd.mandatory}
                     </span>
                   </div>
 

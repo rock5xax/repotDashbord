@@ -1,71 +1,89 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>VAPT Checklist</title>
-  </head>
-  <body>
-    <div id="root"></div>
 
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VAPT Checklist</title>
+</head>
 
-    <script type="text/babel" src="./vapt-checklist.jsx"></script>
-    <script type="text/babel" src="./cybersec-standards01.jsx"></script>
-    <script type="text/babel">
-      function App() {
-        const [page, setPage] = React.useState("vapt");
-        return (
-          <div style={{ minHeight: "100vh", background: "#05070b" }}>
-            <div
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel" src="./vapt-checklist.jsx"></script>
+  <script type="text/babel" src="./cybersec-standards.jsx"></script>
+  <script type="text/babel" src="./cybersec-planning.jsx"></script>
+  <script type="text/babel">
+    function App() {
+      const [page, setPage] = React.useState("vapt");
+      return (
+        <div style={{ minHeight: "100vh", background: "#05070b" }}>
+          <div
+            style={{
+              display: "flex",
+              gap: 8,
+              padding: "10px 12px",
+              borderBottom: "1px solid rgba(255,255,255,0.12)",
+              background: "#0b0f1a",
+              position: "sticky",
+              top: 0,
+              zIndex: 50,
+            }}
+          >
+            <button
+              onClick={() => setPage("vapt")}
               style={{
-                display: "flex",
-                gap: 8,
-                padding: "10px 12px",
-                borderBottom: "1px solid rgba(255,255,255,0.12)",
-                background: "#0b0f1a",
-                position: "sticky",
-                top: 0,
-                zIndex: 50,
+                border: "1px solid " + (page === "vapt" ? "#ef4444" : "rgba(255,255,255,0.2)"),
+                background: page === "vapt" ? "rgba(239,68,68,0.18)" : "transparent",
+                color: page === "vapt" ? "#ef4444" : "rgba(255,255,255,0.75)",
+                borderRadius: 6,
+                padding: "6px 10px",
+                fontSize: 12,
+                cursor: "pointer",
               }}
             >
-              <button
-                onClick={() => setPage("vapt")}
-                style={{
-                  border: "1px solid " + (page === "vapt" ? "#ef4444" : "rgba(255,255,255,0.2)"),
-                  background: page === "vapt" ? "rgba(239,68,68,0.18)" : "transparent",
-                  color: page === "vapt" ? "#ef4444" : "rgba(255,255,255,0.75)",
-                  borderRadius: 6,
-                  padding: "6px 10px",
-                  fontSize: 12,
-                  cursor: "pointer",
-                }}
-              >
-                VAPT Checklist
-              </button>
-              <button
-                onClick={() => setPage("standards")}
-                style={{
-                  border: "1px solid " + (page === "standards" ? "#6366f1" : "rgba(255,255,255,0.2)"),
-                  background: page === "standards" ? "rgba(99,102,241,0.2)" : "transparent",
-                  color: page === "standards" ? "#818cf8" : "rgba(255,255,255,0.75)",
-                  borderRadius: 6,
-                  padding: "6px 10px",
-                  fontSize: 12,
-                  cursor: "pointer",
-                }}
-              >
-                Cybersec Standards
-              </button>
-            </div>
-            {page === "vapt" ? <VAPTChecklist /> : <CybersecStandards />}
+              VAPT Checklist
+            </button>
+            <button
+              onClick={() => setPage("standards")}
+              style={{
+                border: "1px solid " + (page === "standards" ? "#6366f1" : "rgba(255,255,255,0.2)"),
+                background: page === "standards" ? "rgba(99,102,241,0.2)" : "transparent",
+                color: page === "standards" ? "#818cf8" : "rgba(255,255,255,0.75)",
+                borderRadius: 6,
+                padding: "6px 10px",
+                fontSize: 12,
+                cursor: "pointer",
+              }}
+            >
+              Cybersec Standards
+            </button>
+            <button
+              onClick={() => setPage("planning")}
+              style={{
+                border: "1px solid " + (page === "planning" ? "#10b981" : "rgba(255,255,255,0.2)"),
+                background: page === "planning" ? "rgba(16,185,129,0.2)" : "transparent",
+                color: page === "planning" ? "#34d399" : "rgba(255,255,255,0.75)",
+                borderRadius: 6,
+                padding: "6px 10px",
+                fontSize: 12,
+                cursor: "pointer",
+              }}
+            >
+              Strategic Planning
+            </button>
           </div>
-        );
-      }
+          {page === "vapt" ? <VAPTChecklist /> : page === "standards" ? <CybersecStandards /> : <CybersecPlanning />}
+        </div>
+      );
+    }
 
-      ReactDOM.createRoot(document.getElementById("root")).render(<App />);
-    </script>
-  </body>
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+
 </html>
